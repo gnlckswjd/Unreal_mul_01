@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\study\\unrealstudy\\puzzleplatforms\\source\\puzzleplatforms\\puzzleplatforms.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\study\\unrealstudy\\puzzleplatforms\\intermediate\\build\\win64\\puzzleplatformseditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\study\\unrealstudy\\puzzleplatforms\\intermediate\\build\\win64\\unrealeditor\\development\\puzzleplatforms\\definitions.puzzleplatforms.h",
+            "c:\\study\\unrealstudy\\puzzleplatforms\\source\\puzzleplatforms\\puzzleplatforms.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

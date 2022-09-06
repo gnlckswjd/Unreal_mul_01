@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\study\\unrealstudy\\puzzleplatforms\\source\\puzzleplatforms\\platformtrigger.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\study\\unrealstudy\\puzzleplatforms\\intermediate\\build\\win64\\puzzleplatformseditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\study\\unrealstudy\\puzzleplatforms\\intermediate\\build\\win64\\unrealeditor\\development\\puzzleplatforms\\definitions.puzzleplatforms.h",
+            "c:\\study\\unrealstudy\\puzzleplatforms\\source\\puzzleplatforms\\platformtrigger.h",
+            "c:\\study\\unrealstudy\\puzzleplatforms\\intermediate\\build\\win64\\unrealeditor\\inc\\puzzleplatforms\\platformtrigger.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\shapecomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\boxcomponent.generated.h",
+            "c:\\study\\unrealstudy\\puzzleplatforms\\source\\puzzleplatforms\\movingplatform.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\engine\\staticmeshactor.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\staticmeshactor.generated.h",
+            "c:\\study\\unrealstudy\\puzzleplatforms\\intermediate\\build\\win64\\unrealeditor\\inc\\puzzleplatforms\\movingplatform.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
