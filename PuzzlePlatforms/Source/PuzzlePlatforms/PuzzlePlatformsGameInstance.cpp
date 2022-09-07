@@ -2,6 +2,8 @@
 
 
 #include "PuzzlePlatformsGameInstance.h"
+
+#include "OnlineSubsystem.h"
 #include "Engine/Engine.h"
 #include "UObject/ConstructorHelpers.h"
 #include "PlatformTrigger.h"
@@ -40,6 +42,15 @@ void UPuzzlePlatformsGameInstance::Init()
 	if (Subsystem != nullptr)
 	{
 		UE_LOG(LogTemp, Warning,TEXT("Found Subsystem %s"), *Subsystem->GetSubsystemName().ToString());
+		IOnlineSessionPtr SessionInterface = Subsystem->GetSessionInterface();
+		if (SessionInterface.IsValid())
+		{
+			UE_LOG(LogTemp, Warning,TEXT("Found Session Interface "));
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Found no Subsystem"));
 	}
 	
 	

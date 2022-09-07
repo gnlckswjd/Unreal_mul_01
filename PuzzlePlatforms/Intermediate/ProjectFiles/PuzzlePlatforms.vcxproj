@@ -172,7 +172,6 @@
     <None Include="..\..\PuzzlePlatforms.uproject"/>
     <None Include="..\..\Source\PuzzlePlatforms.Target.cs"/>
     <None Include="..\..\Source\PuzzlePlatformsEditor.Target.cs"/>
-    <None Include="..\..\.gitignore"/>
     <None Include="..\..\.ignore"/>
     <None Include="..\..\test.txt"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
