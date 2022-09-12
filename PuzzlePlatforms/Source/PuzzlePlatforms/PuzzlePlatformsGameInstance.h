@@ -38,6 +38,7 @@ private:
 	TSubclassOf<class UUserWidget> ExitMenuClass;
 	
 	IOnlineSessionPtr SessionInterface;
+	TSharedPtr<FOnlineSessionSearch> SessionSearch;
 	
 	class UGameMenu* ExitMenu;
 
@@ -45,6 +46,6 @@ private:
 
 	void OnCreateSessionComplete(FName SessionName, bool Success);
 	void OnDestroySessionComplete(FName SessionName, bool Success);
-
+	void OnFindSessionComplete(bool Success);
 	void CreateSession();
 };
