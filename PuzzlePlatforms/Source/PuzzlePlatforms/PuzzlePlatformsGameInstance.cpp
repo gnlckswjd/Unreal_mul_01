@@ -176,7 +176,7 @@ void UPuzzlePlatformsGameInstance::Join(const FString& Address)
 {
 	if(Menu != nullptr)
 	{
-		//Menu->SetServerList({"Test1","Test2"});
+		Menu->SetServerList({"Test1","Test2"});
 		// Menu->Teardown();
 	}
 	//

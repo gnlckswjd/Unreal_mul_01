@@ -30,6 +30,8 @@ public:
 
 	void Teardown();
 
+	void SelectIndex(uint32 Index);
+
 protected:
 	virtual bool Initialize() override;
 
@@ -82,4 +84,6 @@ private:
 	void EXitGame();
 
 	IMenuInterface* _MenuInterface;
+
+	TOptional<uint32> SelectedIndex;
 };
