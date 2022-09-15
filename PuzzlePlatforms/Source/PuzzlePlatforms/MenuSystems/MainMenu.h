@@ -24,6 +24,8 @@ public:
 	
 	void SetMenuInterface(IMenuInterface* MenuInterface);
 
+    void SetServerList(TArray<FString> ServerNames);
+    
 	void Setup();
 
 	void Teardown();

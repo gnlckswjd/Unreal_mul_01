@@ -30,6 +30,9 @@ public:
 	UFUNCTION(Exec)
 	void Join(const FString& Address);
 
+	UFUNCTION(Exec)
+	void RefreshServerList() override;
+
 	UFUNCTION(BlueprintCallable)
 	void GameMenu();
 	class UMainMenu* Menu;
