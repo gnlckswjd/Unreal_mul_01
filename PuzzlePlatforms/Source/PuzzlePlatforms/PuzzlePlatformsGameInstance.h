@@ -28,7 +28,7 @@ public:
 	void Host();
 
 	UFUNCTION(Exec)
-	void Join(const FString& Address);
+	void Join(uint32 Index);
 
 	UFUNCTION(Exec)
 	void RefreshServerList() override;
@@ -50,5 +50,7 @@ private:
 	void OnCreateSessionComplete(FName SessionName, bool Success);
 	void OnDestroySessionComplete(FName SessionName, bool Success);
 	void OnFindSessionComplete(bool Success);
+	void OnJoinSessionComplete(FName SessionName, EOnJoinSessionCompleteResult::Type Result);
+	
 	void CreateSession();
 };

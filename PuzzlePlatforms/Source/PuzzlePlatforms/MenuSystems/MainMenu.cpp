@@ -151,22 +151,15 @@ void UMainMenu::CancelMenu()
 
 void UMainMenu::JoinToGame()
 {
-	if(SelectedIndex.IsSet())
+	if(SelectedIndex.IsSet()&&_MenuInterface!=nullptr)
 	{
 		UE_LOG(LogTemp,Warning,TEXT("Selected Index %d"),SelectedIndex.GetValue());
+		_MenuInterface->Join(SelectedIndex.GetValue());
 	}
 	else
 	{
 		UE_LOG(LogTemp,Warning,TEXT("Selected Index not sat "));
 	}
-	if (_MenuInterface==nullptr) return;
-	
-	// FText IPText = IPAddressField->GetText();
-	_MenuInterface->Join("Address");
-	
-	
-
-	
 	
 }
 
