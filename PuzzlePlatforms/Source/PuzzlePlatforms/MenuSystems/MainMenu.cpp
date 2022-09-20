@@ -97,6 +97,8 @@ void UMainMenu::Teardown()
 void UMainMenu::SelectIndex(uint32 Index)
 {
 	SelectedIndex = Index;
+	UpdateChildren();
+	
 }
 
 bool UMainMenu::Initialize()
@@ -177,4 +179,16 @@ void UMainMenu::EXitGame()
 	}
 	PlayerController->ConsoleCommand("quit");
 
+}
+
+void UMainMenu::UpdateChildren()
+{
+	for (int32 i=0; i< ServerList->GetChildrenCount(); ++i)
+	{
+		UServerRow* Row = Cast<UServerRow>(ServerList->GetChildAt(i));
+		if(Row != nullptr)
+		{
+			Row->Selected = (SelectedIndex.IsSet() && SelectedIndex.GetValue() == i);
+		}
+	}
 }

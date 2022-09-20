@@ -86,4 +86,6 @@ private:
 	IMenuInterface* _MenuInterface;
 
 	TOptional<uint32> SelectedIndex;
+
+	void UpdateChildren();
 };
