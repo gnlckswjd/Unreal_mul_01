@@ -25,23 +25,25 @@ void UMainMenu::SetMenuInterface(IMenuInterface* MenuInterface)
 	this->_MenuInterface = MenuInterface;
 }
 
-void UMainMenu::SetServerList(TArray<FString> ServerNames)
+void UMainMenu::SetServerList(TArray<FServerData> ServerNames)
 {
-		
-	
 	UWorld* World = this->GetWorld();
 	if (World == nullptr) return;
 
 	ServerList->ClearChildren();
 
 	uint32 i= 0;
-	for (const FString& ServerName : ServerNames)
+	for (const FServerData& ServerData : ServerNames)
 	{
 		ServerRow = CreateWidget<UServerRow>(this, ServerRowClass);
 
 		if (!ensure((ServerRow != nullptr))) return;
 
-		ServerRow->ServerName->SetText(FText::FromString(ServerName));
+		ServerRow->ServerName->SetText(FText::FromString(ServerData.Name));
+		ServerRow->HostUser->SetText(FText::FromString(ServerData.HostUsername));
+
+		FString UserNum= FString::Printf(TEXT("%d/%d"),ServerData.CurrentPlayers, ServerData.MaxPlayers);
+		ServerRow->ConnectionFraction->SetText(FText::FromString(UserNum));
 		ServerRow->SetUp(this,i++);
 		ServerList->AddChild(ServerRow);
 	}
