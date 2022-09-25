@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "GameMenu.h"
+#include "Components/EditableTextBox.h"
 #include "MainMenu.generated.h"
 
 
@@ -65,25 +66,43 @@ private:
 
 	UPROPERTY(meta=(BindWidget))
 	UButton* ExitButton;
+
+	
 	
 	
 	UPROPERTY(meta = (BindWidget))
     class UWidgetSwitcher* MenuSwitcher;
 
+	UPROPERTY(meta=(BindWidget))
+	UWidget* Menu;
+
 	UPROPERTY(meta = (BindWidget))
 	UWidget* JoinMenu;
 
-	UPROPERTY(meta=(BindWidget))
-	UWidget* Menu;
+	UPROPERTY(meta = (BindWidget))
+	UWidget* HostMenu;
 	
 	UPROPERTY(meta =(BindWidget))
-	class UPanelWidget* ServerList;
+	UPanelWidget* ServerList;
 
+	UPROPERTY(meta = (BindWidget))
+	UEditableTextBox* ServerHostName;
+
+	UPROPERTY(meta = (BindWidget))
+	UButton* ConfirmHostMenu;
+
+	UPROPERTY(meta = (BindWidget))
+	UButton* CancelHostMenu;
+	
+	
 	UFUNCTION()
 	void HostServer();
 
 	UFUNCTION()
 	void OpenJoinMenu();
+
+	UFUNCTION()
+	void OpenHostMenu();
 
 	UFUNCTION()
 	void CancelMenu();

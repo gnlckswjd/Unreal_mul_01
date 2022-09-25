@@ -25,7 +25,7 @@ public:
 	void LoadMenuWidget();
 
 	UFUNCTION(Exec)
-	void Host();
+	void Host(FString ServerName);
 
 	UFUNCTION(Exec)
 	void Join(uint32 Index);
@@ -42,7 +42,8 @@ private:
 	
 	IOnlineSessionPtr SessionInterface;
 	TSharedPtr<FOnlineSessionSearch> SessionSearch;
-	
+
+	FString DesiredServerName;
 	class UGameMenu* ExitMenu;
 
 	virtual  void LoadMainMenu() override;
