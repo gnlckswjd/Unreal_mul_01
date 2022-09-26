@@ -30,6 +30,8 @@ public:
 	UFUNCTION(Exec)
 	void Join(uint32 Index);
 
+	void StartSession();
+
 	UFUNCTION(Exec)
 	void RefreshServerList() override;
 
