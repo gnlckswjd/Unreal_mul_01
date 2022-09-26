@@ -17,7 +17,7 @@
 
 
 
-const static FName SESSION_NAME =TEXT("My Session Game");
+const static FName SESSION_NAME =TEXT("Game");
 const static FName SERVER_NAME_SETTINGS_KEY= TEXT("ServerName");
 UPuzzlePlatformsGameInstance::UPuzzlePlatformsGameInstance(const FObjectInitializer& ObjectInitializer)
 {
