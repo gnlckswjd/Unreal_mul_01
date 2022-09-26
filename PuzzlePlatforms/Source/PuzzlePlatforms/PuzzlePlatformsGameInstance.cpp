@@ -67,8 +67,10 @@ void UPuzzlePlatformsGameInstance::Init()
 				this,
 				&UPuzzlePlatformsGameInstance::OnJoinSessionComplete
 				);
-
-		
+		}
+		if (GEngine != nullptr)
+		{
+			GEngine->OnNetworkFailure().AddUObject(this,&UPuzzlePlatformsGameInstance::OnNetworkFailure);
 		}
 	}
 	else
@@ -197,6 +199,12 @@ void UPuzzlePlatformsGameInstance::OnJoinSessionComplete(FName SessionName, EOnJ
 	if (!ensure(PlayerController != nullptr)) return;
 	
 	PlayerController->ClientTravel(Address, ETravelType::TRAVEL_Absolute);
+}
+
+void UPuzzlePlatformsGameInstance::OnNetworkFailure(UWorld* World, UNetDriver* NetDriver,
+	ENetworkFailure::Type FailureType, const FString& ErrorString)
+{
+	LoadMainMenu();
 }
 
 void UPuzzlePlatformsGameInstance::CreateSession()
