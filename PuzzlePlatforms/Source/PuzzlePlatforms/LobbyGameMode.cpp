@@ -7,9 +7,17 @@ void ALobbyGameMode::PostLogin(APlayerController* NewPlayer)
 {
 	Super::PostLogin(NewPlayer);
 	++NumberOfPlayers;
-	if(NumberOfPlayers>=3)
+	if(NumberOfPlayers>=2)
 	{
-		UE_LOG(LogTemp,Warning,TEXT("Reached 3 players!"));
+		UE_LOG(LogTemp, Warning, TEXT("it is working"));
+		UWorld* World = GetWorld();
+		if(World == nullptr)
+		{
+			return;
+		}
+		bUseSeamlessTravel = true;
+		World->ServerTravel("/Game/PuzzlePlatform/Maps/ThirdPersonMap?listen");
+		
 	}
 }
 
